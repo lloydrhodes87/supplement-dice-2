@@ -1,1 +1,1 @@
-# supplement-dice-2
+# supplement-dice-game
