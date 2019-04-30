@@ -1,14 +1,17 @@
 <template>
   <div class="hello">
     <div class="diceContainer">
-      <div class="dice" key="dice1">
-        <p>{{letter}}</p>
+      <div class="dice" key="dice2">
+        <p class="person">{{who}}</p>
       </div>
       <div class="dice" key="dice2">
+        <p>{{letter}}</p>
+      </div>
+      <div class="dice" key="dice3">
         <p>{{number}}</p>
       </div>
     </div>
-    <button @click="generateRandom">Roll Dice</button>
+    <button @click="generateRandom">aqui</button>
   </div>
 </template>
 
@@ -16,8 +19,18 @@
 export default {
   data() {
     return {
+      who: "",
       letter: "",
       number: undefined,
+      people: [
+        "Yo",
+        "Tu",
+        "Mi Padre",
+        "Mi Madre",
+        "Nosotros",
+        "Vosotros",
+        "Mis Amigos"
+      ],
       letters: [
         "A",
         "B",
@@ -55,6 +68,9 @@ export default {
       this.letter = this.letters[randomIndex];
 
       this.number = Math.floor(Math.random() * 27);
+      const randomPersonIndex = Math.floor(Math.random() * this.people.length);
+
+      this.who = this.people[randomPersonIndex];
     }
   }
 };
@@ -105,6 +121,10 @@ p {
   line-height: 200px;
   margin: 0;
   color: #c60b1e;
+}
+
+.person {
+  font-size: 60%;
 }
 
 @media screen and (max-width: 640px) {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Random numbers and Letters</h1>
+    <h1>Tira el dado</h1>
     <div id="app">
       <HelloWorld/>
     </div>
